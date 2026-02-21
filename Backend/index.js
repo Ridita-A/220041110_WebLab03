@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
 const workoutRoutes = require("./routes/workoutRoutes");
@@ -9,6 +10,7 @@ const trainerRoutes = require("./routes/trainerRoutes");
 const app = express();
 
 // middleware
+app.use(cors());                
 app.use(express.json());
 
 // MongoDB
@@ -28,5 +30,7 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (require.main === module) {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}

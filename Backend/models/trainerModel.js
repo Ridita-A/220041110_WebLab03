@@ -16,7 +16,7 @@ const trainerSchema = new Schema({
 
     specialization: {
         type: [String],
-        enum: ['yoga', 'cardio', 'strength', 'pilates', 'crossfit']
+        enum: ['yoga', 'cardio', 'strength', 'pilates', 'cross-fit']
     },
 
     experienceYears: {

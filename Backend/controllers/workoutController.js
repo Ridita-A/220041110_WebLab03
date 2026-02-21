@@ -29,11 +29,11 @@ const getWorkout = async (req, res) => {
 
 // Create
 const createWorkout = async (req, res) => {
-  const { title, load, reps, difficulty } = req.body
+  const { workoutType, load, reps, difficulty } = req.body
 
   try {
     const workout = await Workout.create({
-      title,
+      workoutType,
       load,
       reps,
       difficulty,
@@ -78,7 +78,7 @@ const updateWorkout = async (req, res) => {
 
 const scheduleWorkout = async (req, res) => {
   try {
-    const { userId, trainerId, title, load, reps, difficulty, scheduledAt, notes } = req.body
+    const { userId, trainerId, workoutType, load, reps, difficulty, scheduledAt, notes } = req.body
 
     // Validate user
     const user = await User.findById(userId)
@@ -100,20 +100,32 @@ const scheduleWorkout = async (req, res) => {
     }
 
     // Check time conflict (user)
-    const conflict = await Workout.findOne({
+    const userConflict = await Workout.findOne({
       user: userId,
       scheduledAt
     })
 
-    if (conflict) {
+    if (userConflict) {
       return res.status(400).json({
         error: 'User already has a workout at this time'
       })
     }
 
+    // Check time conflict (trainer)
+    const trainerConflict = await Workout.findOne({
+      trainer: trainerId,
+      scheduledAt
+    })
+
+    if (trainerConflict) {
+      return res.status(400).json({
+        error: 'Trainer already has a workout scheduled at this time'
+      })
+    }
+
     // Create scheduled workout
     const workout = await Workout.create({
-      title,
+      workoutType,
       load,
       reps,
       difficulty,

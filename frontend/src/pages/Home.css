@@ -1,0 +1,22 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.button-group button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(2, 133, 234);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
