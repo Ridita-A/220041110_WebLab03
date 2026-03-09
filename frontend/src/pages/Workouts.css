@@ -1,13 +1,16 @@
 .workouts-container {
   padding: 40px;
-  font-family: Arial, sans-serif;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 .back-link {
-  display: block;
   margin-bottom: 20px;
-  text-decoration: none;
   color: #2196F3;
+}
+
+h2{
+  text-align: center;
 }
 
 .workouts-container h2 {

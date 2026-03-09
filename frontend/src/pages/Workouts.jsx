@@ -129,6 +129,9 @@ function Workouts() {
         <thead>
           <tr>
             <th>Type</th>
+            <th>Load</th>
+            <th>Reps</th>
+            <th>Difficulty</th>
             <th>User</th>
             <th>Trainer</th>
             <th>Scheduled</th>
@@ -140,6 +143,9 @@ function Workouts() {
           {workouts.map(workout => (
             <tr key={workout._id}>
               <td>{workout.workoutType}</td>
+              <td>{workout.load}</td>
+              <td>{workout.reps}</td>
+              <td>{workout.difficulty}</td>
               <td>{workout.user?.name || "N/A"}</td>
               <td>{workout.trainer?.name || "N/A"}</td>
               <td>{new Date(workout.scheduledAt).toLocaleString()}</td>

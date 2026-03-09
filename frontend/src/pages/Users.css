@@ -1,13 +1,12 @@
 .users-container {
   padding: 40px;
-  font-family: Arial, sans-serif;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 .back-link {
-  display: block;
   margin-bottom: 20px;
-  text-decoration: none;
-  color: #2196F3;
+  color: rgb(2, 133, 234);
 }
 
 .user-form {
@@ -16,7 +15,7 @@
 
 .user-form input, .user-form select {
   padding: 8px;
-  margin-right: 10px;
+  margin: 10px;
   border: 1px solid #ddd;
 }
 
@@ -33,20 +32,11 @@
   margin-left: 10px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 900px;
-}
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
 
 th {
-  background-color: #f2f2f2;
+  background-color: white;
+  justify-content: center;
 }
 
 tr:hover {
@@ -54,13 +44,13 @@ tr:hover {
 }
 
 td button {
-  padding: 5px 10px;
+  padding: 20px 20px;
   margin-right: 5px;
-  cursor: pointer;
+  cursor:alias;
 }
 
 td button:first-child {
-  background-color: #2196F3;
+  background-color: rgb(2, 133, 234);;
   color: white;
   border: none;
 }
