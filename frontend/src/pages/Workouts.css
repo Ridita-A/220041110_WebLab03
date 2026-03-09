@@ -1,15 +1,47 @@
 .workouts-container {
   padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #2196F3;
 }
 
 .workouts-container h2 {
   margin-bottom: 20px;
 }
 
+.workout-form {
+  margin-bottom: 20px;
+}
+
+.workout-form input, .workout-form select {
+  padding: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.workout-form button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.workout-form button[type="button"] {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 500px;
+  max-width: 1100px;
 }
 
 th, td {
@@ -24,4 +56,22 @@ th {
 
 tr:hover {
   background-color: #f9f9f9;
+}
+
+td button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+td button:first-child {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+td button:last-child {
+  background-color: #f44336;
+  color: white;
+  border: none;
 }

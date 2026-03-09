@@ -1,15 +1,51 @@
 .trainers-container {
   padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #2196F3;
 }
 
 .trainers-container h2 {
   margin-bottom: 20px;
 }
 
+.trainer-form {
+  margin-bottom: 20px;
+}
+
+.trainer-form input, .trainer-form select {
+  padding: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.trainer-form label {
+  margin-right: 10px;
+}
+
+.trainer-form button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.trainer-form button[type="button"] {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 th, td {
@@ -24,4 +60,22 @@ th {
 
 tr:hover {
   background-color: #f9f9f9;
+}
+
+td button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+td button:first-child {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+}
+
+td button:last-child {
+  background-color: #f44336;
+  color: white;
+  border: none;
 }
